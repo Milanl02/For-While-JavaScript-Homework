@@ -14,21 +14,28 @@ var knights_health=5;
         //Everything above works
         var dragon_dealt_damage = Math.floor(Math.random() * 2) + 1;
         knights_health = knights_health - dragon_dealt_damage;
-
-        console.log(dragon_health)
-        console.log(knights_health)
-
     }
 
-if (knights_health<=0){
-    user_play.innerHTML = "The dragon killed you!"
-}else if (dragon_health<=0){
+if (dragon_health<=0){
     user_play.innerHTML="You killed it."
+}else{
+    user_play.innerHTML = "The dragon killed you!"
 }
 
+// if (dragon_health<=0){
+//     user_play.innerHTML="You killed it."
+// }else{
+//     user_play.innerHTML = "The dragon killed you!"
+// }
+
+//NOTE!!!!
+//Everything works except for the part of where the code recognizes whether or not the knight's health reaches zero.
+//Code will always end with "You killed it" even if the knight's health reaches 0 before the dragon's health.
+//Code will continue to loop until the dragon's health reaches 0, not until one of the character's health reaches zero.
 
 
 
 
 
-   
+
+
